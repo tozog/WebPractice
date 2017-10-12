@@ -1,0 +1,41 @@
+<html>
+
+<style>
+
+  h1{
+    text-align: center;
+  }
+</style>
+
+<!--This function is supposed to write input from forms to a new text document
+The file path may not be correct and will have to rename the input names
+https://stackoverflow.com/questions/16870876/writing-html-form-data-to-a-txt-file-without-the-use-of-a-webserver-->
+<script type="text/javascript">
+  function FileWriter(passForm){
+    set fso = CreateObject("Scripting.FileSystemObject");
+    set s = fso.CreateTextFile("ThisPC/Desktop/test.txt", True);
+    //Repeat for each value and rename value
+    s.writeline(document.passForm.customerName.value);
+
+  }
+</script>
+
+<body>
+
+  <center><img src="http://www.calabriamillbury.com/images/italian.jpg"
+  alt="Food Banner" style="width: 900px; height: 164px;"></center>
+
+  <h1 style="font-family:Bookman Old Style;"><font size="7">Food Review</font></h1>
+
+  <form>
+    Name:<br>
+    <input type="text" name="customerName" value="Your Name">
+    <br>
+
+
+
+  </form>
+
+</body>
+
+</html>
